@@ -32,6 +32,8 @@ docker run \
     --env="XAUTHORITY=${XAUTH}" \
     --env="DISPLAY=${DISPLAY}" \
     --env="USER_ID=$USER_ID" \
+    --env="NVIDIA_VISIBLE_DEVICES=all" \
+    --env="NVIDIA_DRIVER_CAPABILITIES=utility,compute,graphics" \
     --privileged \
     --net=host \
     $RUNTIME \
